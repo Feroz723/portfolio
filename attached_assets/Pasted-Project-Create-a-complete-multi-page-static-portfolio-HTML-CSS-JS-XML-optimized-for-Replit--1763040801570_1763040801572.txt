@@ -1,0 +1,113 @@
+Project: Create a complete multi-page static portfolio (HTML, CSS, JS, XML) optimized for Replit.
+
+Goal:
+- Convert a single-page portfolio into a responsive multi-page site with pages: index.html (Home), about.html (About), projects.html (Projects), contact.html (Contact), plus two project detail pages (projects/project-1.html, projects/project-2.html).
+- Use only: plain HTML, CSS, vanilla JavaScript (ES modules allowed), and XML for structured data.
+- No build tools, no frameworks, no server-side code. Must run on Replit using a simple static server (provide run instructions).
+
+Design & palette:
+- Use the **Clean Minimal** palette:
+  --bg: #ffffff; --surface: #f7f8fa; --text: #0b1220; --muted: #6b7280; --accent: #00c2ff; --accent-2: #06b6d4;
+- Include a [data-theme="dark"] block with dark overrides:
+  --bg: #0f1724; --surface: #111827; --text: #e6eef8; --muted: #9aa7b7; --accent: #00e5b8;
+
+File tree to create (exact):
+/
+├─ index.html
+├─ about.html
+├─ projects.html
+├─ contact.html
+├─ projects/
+│  ├─ project-1.html
+│  └─ project-2.html
+├─ components/
+│  ├─ header.html
+│  └─ footer.html
+├─ assets/
+│  ├─ css/
+│  │  └─ styles.css
+│  ├─ js/
+│  │  ├─ include.js
+│  │  ├─ nav.js
+│  │  ├─ theme.js
+│  │  ├─ skills.js
+│  │  ├─ projects.js
+│  │  └─ contact.js
+│  ├─ images/
+│  │  ├─ hero-placeholder.jpg
+│  │  ├─ proj1-thumb.jpg
+│  │  └─ proj2-thumb.jpg
+│  └─ data/
+│     ├─ skills.xml
+│     └─ projects.xml
+├─ resume.pdf (placeholder)
+├─ sitemap.xml
+└─ README.md
+
+Requirements & behavior:
+1. Header & Footer
+   - Create components/header.html and components/footer.html with semantic markup:
+     header: left-aligned site name "Feroz" (text logo), right nav linking to index.html, about.html, projects.html, contact.html, and a mobile hamburger button and theme toggle.
+     footer: quick links (Home, About, Projects, Contact), "Project Pages" with links to projects/project-1.html and projects/project-2.html, social icons placeholders (GitHub, LinkedIn), and copyright "© 2025 Feroz. All rights reserved."
+   - DO NOT inline full header/footer into other pages. Instead add injection points (<div id="header"></div>, <div id="footer"></div>) in each page and use include.js to load partials.
+
+2. include.js
+   - Fetch and inject components/header.html into #header and components/footer.html into #footer on DOMContentLoaded.
+   - Handle fetch errors gracefully and log warnings.
+
+3. styles.css
+   - Implement CSS variables for the Clean Minimal palette and dark overrides.
+   - Provide global reset, .container utility, responsive header layout, .grid, .card, hero styles, project card styles, skill progress styles, accessible form styles, and responsive breakpoints.
+   - Ensure good contrast and keyboard focus styles.
+   - Use accent color for primary CTAs and nav active/hovers.
+
+4. nav.js
+   - Implement mobile menu toggle (open/close) and close on Escape.
+   - Highlight the active nav link by detecting current page filename and adding .active class to the matching <a> in header and footer.
+
+5. theme.js
+   - Add dark/light toggle that sets data-theme on <html>, stores choice to localStorage, and applies preference on page load.
+
+6. About & skills.xml + skills.js
+   - Create assets/data/skills.xml with categories and skill entries with 'name' and 'level' attributes.
+   - Create skills.js to fetch skills.xml, parse with DOMParser, and render accessible <progress> bars into an element with id="skills-container" in about.html.
+   - Provide graceful fallback static skills list in about.html for no-JS.
+
+7. Projects + projects.xml + projects.js
+   - Create assets/data/projects.xml with at least 3 project entries (id, slug, title, summary, tech tags, thumb path).
+   - Create projects.js to fetch projects.xml, render a responsive grid into #projects-grid, and implement client-side filtering by tech (checkbox chips).
+   - Each project card must include a "View Details" link to projects/<slug>.html. Ensure keyboard accessibility.
+
+8. Project detail pages
+   - Create two complete static project pages (projects/project-1.html and project-2.html) with: hero, Problem → Approach → Solution sections, tech stack list, screenshots (use assets/images placeholders), links to Live Demo and GitHub, and "Back to Projects" CTA.
+
+9. Contact + contact.js
+   - Create a contact form with fields: name (required), email (required, type=email), subject (optional), message (required).
+   - Implement client-side validation and show success/error messages. Do not submit to a backend; show how to wire to Formspree/Netlify in README and provide mailto fallback.
+
+10. Accessibility & SEO
+    - Every page must have a unique <title>, <meta name="description">, rel="canonical" to its filename, and meaningful alt attributes for images.
+    - Add a basic JSON-LD website snippet in index.html head.
+    - Create sitemap.xml listing all pages.
+
+11. Performance & progressive enhancement
+    - Defer non-critical JS. Use loading="lazy" on images. Ensure site works (content visible) without JS for core pages (home, about, projects index, contact fallback).
+
+12. README.md
+    - Explain file structure, how to run locally on Replit (recommended run command: `python3 -m http.server 8080`), how to preview, how to add projects (edit assets/data/projects.xml + create project page), and how to wire contact forms to Formspree/Netlify.
+
+13. Run & test
+    - After file creation, list all created files and provide a single command to run a simple static server on Replit: `python3 -m http.server 8080` (or use Replit's run button). Include preview URL suggestion (Replit will show it).
+
+Output expectations:
+- Create every file listed above with production-ready, well-commented code (HTML/CSS/JS) using only the allowed tech.
+- Use the Clean Minimal color palette by default, with working dark mode toggle.
+- Ensure header/footer injection, active link highlighting, mobile menu, skills loader (XML), projects loader (XML), contact validation, and two static project pages work.
+- Provide the final list of all created/changed files and one-line instructions to run the site on Replit.
+
+Additional notes:
+- Keep code dependency-free and easy to edit.
+- Keep placeholder images in assets/images and reference them in HTML.
+- Use semantic HTML and ARIA where appropriate.
+
+END OF PROMPT
