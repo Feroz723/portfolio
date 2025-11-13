@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skills>
+  <category name="Frontend Development">
+    <skill name="HTML/CSS" level="95" />
+    <skill name="JavaScript" level="90" />
+    <skill name="React" level="85" />
+    <skill name="Vue.js" level="80" />
+    <skill name="Responsive Design" level="90" />
+  </category>
+  <category name="Backend Development">
+    <skill name="Node.js" level="85" />
+    <skill name="Python" level="80" />
+    <skill name="PHP" level="75" />
+    <skill name="Database Design" level="85" />
+    <skill name="RESTful APIs" level="90" />
+  </category>
+  <category name="Tools & Technologies">
+    <skill name="Git/GitHub" level="90" />
+    <skill name="Docker" level="75" />
+    <skill name="AWS" level="70" />
+    <skill name="CI/CD" level="80" />
+    <skill name="Testing" level="85" />
+  </category>
+  <category name="Design & UX">
+    <skill name="UI/UX Design" level="80" />
+    <skill name="Figma" level="85" />
+    <skill name="Accessibility" level="90" />
+    <skill name="User Research" level="75" />
+  </category>
+</skills>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projects>
+  <project id="1" slug="project-1">
+    <title>E-Commerce Platform</title>
+    <summary>A full-featured e-commerce platform with shopping cart, payment integration, and admin dashboard.</summary>
+    <thumbnail>/assets/images/proj1-thumb.jpg</thumbnail>
+    <tech>React</tech>
+    <tech>Node.js</tech>
+    <tech>MongoDB</tech>
+    <tech>Stripe</tech>
+  </project>
+  <project id="2" slug="project-2">
+    <title>Task Management App</title>
+    <summary>A collaborative task management application with real-time updates and team collaboration features.</summary>
+    <thumbnail>/assets/images/proj2-thumb.jpg</thumbnail>
+    <tech>Vue.js</tech>
+    <tech>Firebase</tech>
+    <tech>WebSockets</tech>
+  </project>
+  <project id="3" slug="project-3">
+    <title>Weather Dashboard</title>
+    <summary>An interactive weather dashboard with forecasts, maps, and historical data visualization.</summary>
+    <thumbnail>/assets/images/hero-placeholder.jpg</thumbnail>
+    <tech>JavaScript</tech>
+    <tech>APIs</tech>
+    <tech>Charts</tech>
+  </project>
+</projects>

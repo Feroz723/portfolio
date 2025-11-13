@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Task Management App - A collaborative task tracking application with real-time updates, team features, and intuitive interface.">
+  <link rel="canonical" href="/projects/project-2.html">
+  <title>Task Management App - Project | Feroz</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="project-detail">
+          <div class="project-hero">
+            <h1>Task Management App</h1>
+            <p style="font-size: 1.25rem; color: var(--muted); max-width: 700px; margin: 0 auto;">
+              A real-time collaborative task tracking solution for modern teams
+            </p>
+            <div class="tags">
+              <span class="tag">Vue.js</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">WebSockets</span>
+              <span class="tag">Vuex</span>
+              <span class="tag">TypeScript</span>
+            </div>
+            <img src="/assets/images/proj2-thumb.jpg" alt="Task Management App Interface" loading="eager">
+          </div>
+
+          <div class="project-links">
+            <a href="#" class="cta-button" target="_blank" rel="noopener noreferrer">Live Demo</a>
+            <a href="https://github.com" class="cta-button secondary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+          </div>
+
+          <div class="project-section">
+            <h2>The Problem</h2>
+            <p style="font-size: 1.125rem; color: var(--muted);">
+              Remote teams face challenges coordinating tasks and maintaining visibility into project progress. 
+              Traditional project management tools are often over-complicated for small teams or lack the real-time 
+              collaboration features that distributed teams need to stay aligned.
+            </p>
+            <p style="font-size: 1.125rem; color: var(--muted);">
+              Teams needed a lightweight solution that provides instant updates when tasks change, allows for 
+              easy task assignment and prioritization, and works seamlessly across devices without requiring 
+              constant page refreshes.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>The Approach</h2>
+            <p style="font-size: 1.125rem; color: var(--muted);">
+              I chose Vue.js for its reactive nature and gentle learning curve, making it ideal for building 
+              a responsive, real-time interface. Firebase was selected as the backend to leverage its real-time 
+              database capabilities and built-in authentication.
+            </p>
+            <p style="font-size: 1.125rem; color: var(--muted);">
+              The development process focused on:
+            </p>
+            <ul style="font-size: 1.125rem; color: var(--muted); margin-left: 2rem; line-height: 1.8;">
+              <li><strong>Real-time Synchronization:</strong> Using Firebase Realtime Database and WebSockets for instant updates</li>
+              <li><strong>Intuitive UX:</strong> Drag-and-drop task organization with visual feedback</li>
+              <li><strong>Offline Support:</strong> Implementing local caching so users can work without internet</li>
+              <li><strong>Type Safety:</strong> Using TypeScript to catch errors early and improve code maintainability</li>
+            </ul>
+          </div>
+
+          <div class="project-section">
+            <h2>The Solution</h2>
+            <p style="font-size: 1.125rem; color: var(--muted);">
+              The application provides a comprehensive task management experience with features designed 
+              for team collaboration:
+            </p>
+            <div class="grid" style="margin-top: 2rem;">
+              <div class="card">
+                <h3>Core Features</h3>
+                <ul style="color: var(--muted);">
+                  <li>Kanban-style task boards</li>
+                  <li>Drag-and-drop task organization</li>
+                  <li>Real-time updates across all users</li>
+                  <li>Task assignments and due dates</li>
+                  <li>Priority levels and labels</li>
+                  <li>Activity timeline and history</li>
+                </ul>
+              </div>
+              <div class="card">
+                <h3>Team Features</h3>
+                <ul style="color: var(--muted);">
+                  <li>Team workspaces</li>
+                  <li>User presence indicators</li>
+                  <li>Comments and mentions</li>
+                  <li>File attachments</li>
+                  <li>Task filtering and search</li>
+                  <li>Email notifications</li>
+                </ul>
+              </div>
+            </div>
+            <p style="font-size: 1.125rem; color: var(--muted); margin-top: 2rem;">
+              The app has been adopted by several small teams and startups, with users reporting a 40% 
+              improvement in task completion rates and significantly better team communication.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Technologies Used</h2>
+            <div class="tech-stack">
+              <div class="tech-item">Vue.js 3</div>
+              <div class="tech-item">Vuex</div>
+              <div class="tech-item">TypeScript</div>
+              <div class="tech-item">Firebase</div>
+              <div class="tech-item">Firestore</div>
+              <div class="tech-item">WebSockets</div>
+              <div class="tech-item">Vue Router</div>
+              <div class="tech-item">Tailwind CSS</div>
+              <div class="tech-item">Vite</div>
+              <div class="tech-item">Jest</div>
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Screenshots</h2>
+            <div class="screenshots-grid">
+              <img src="/assets/images/proj2-thumb.jpg" alt="Kanban board view" loading="lazy">
+              <img src="/assets/images/hero-placeholder.jpg" alt="Task detail modal" loading="lazy">
+              <img src="/assets/images/proj1-thumb.jpg" alt="Team workspace dashboard" loading="lazy">
+              <img src="/assets/images/proj2-thumb.jpg" alt="Activity timeline" loading="lazy">
+            </div>
+          </div>
+
+          <div class="project-section">
+            <h2>Challenges & Solutions</h2>
+            <p style="font-size: 1.125rem; color: var(--muted);">
+              <strong>Challenge:</strong> Handling real-time updates without overwhelming the UI or causing 
+              performance issues.
+            </p>
+            <p style="font-size: 1.125rem; color: var(--muted);">
+              <strong>Solution:</strong> Implemented debouncing for rapid updates and optimistic UI updates 
+              to provide instant feedback while synchronizing in the background.
+            </p>
+            <p style="font-size: 1.125rem; color: var(--muted); margin-top: 1rem;">
+              <strong>Challenge:</strong> Managing complex state across multiple components and ensuring 
+              data consistency.
+            </p>
+            <p style="font-size: 1.125rem; color: var(--muted);">
+              <strong>Solution:</strong> Used Vuex for centralized state management and TypeScript interfaces 
+              to enforce data structure consistency across the application.
+            </p>
+          </div>
+
+          <div class="project-section">
+            <h2>Key Takeaways</h2>
+            <p style="font-size: 1.125rem; color: var(--muted);">
+              This project deepened my understanding of real-time web applications and the complexities of 
+              managing synchronized state across multiple clients. Firebase proved to be an excellent choice 
+              for rapid development while providing enterprise-grade infrastructure.
+            </p>
+            <p style="font-size: 1.125rem; color: var(--muted);">
+              The importance of optimistic UI updates became clear—users expect instant feedback, and handling 
+              background synchronization transparently is crucial for a polished user experience.
+            </p>
+          </div>
+
+          <div style="text-align: center; margin-top: 3rem;">
+            <a href="/projects.html" class="cta-button secondary">← Back to Projects</a>
+            <a href="/contact.html" class="cta-button">Discuss Your Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="/assets/js/include.js"></script>
+  <script src="/assets/js/nav.js" defer></script>
+  <script src="/assets/js/theme.js" defer></script>
+</body>
+</html>
